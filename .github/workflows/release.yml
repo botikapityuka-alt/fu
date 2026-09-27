@@ -18,3 +18,9 @@ jobs:
       - uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tagName: v0.1.0 # így automatikusan létrehoz egy kiadást
+          releaseName: 'App v0.1.0'
+          releaseBody: 'Windows build'
+          releaseDraft: false
+          prerelease: false  
